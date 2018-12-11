@@ -24,6 +24,23 @@ function show(no){
 $("#dialog"+no).dialog()
 
 }
+  
+  window.onerror = function(){
+$( "#errorDialog" ).dialog({
+  dialogClass: "no-close",
+  buttons: [
+    {
+      text: "Try Reloading the Page",
+      click: function() {
+        document.location.reload()
+      }
+    }
+  ]
+});
+    setTimeout(function(){
+      $("#errorDialog").dialog( "close" );},2000)
+
+  }
 </script>
 <link href="https://combinatronics.com/ChiefChippy2/AllCss/master/AllCss.css" rel="stylesheet"></style>
 </head>
@@ -52,7 +69,10 @@ Welcome!
          Yes I play video games. This is a site with info about my gaming. 
       
     </div>
-    
+    <div id="errorDialog" style="display:none;">
+      Oops. Some sort of error occurred. You can try to reload the page.
+      <br>This will automatically close in 2 seconds
+    </div>
     
   </div>
 </body>
