@@ -15,7 +15,11 @@ google_ad_client: "pub-8064181302552298",
 enable_page_level_ads: true
 
 });
+function show(no){
 
+$("#dialog"+no).dialog()
+
+}
 </script>
 <link href="https://combinatronics.com/ChiefChippy2/AllCss/master/AllCss.css" rel="stylesheet"></style>
 </head>
@@ -29,17 +33,17 @@ Welcome!
   <br> I am not gonna run in details but you can find a large number of them here - <a href="/AllSites" >at allSites</a>
     <br><h2> Some featured Sites : </h2>
     <br><h3>EZT services</h3>
-    <img src="unavailable.sorry" onmouseover="$('#dialog1').dialog()">
+    <img src="unavailable.sorry" onmouseover="show('1')">
     <div id="dialog1" title="EZT Services">
          EZT is a very useful service I made for shortening URLs and long Texts for 24 hours.
     </div>
     <br><h3>ChiefChippy2 Site Guide</h3>
-    <img src="unavailable.sorry" onmouseover="$('#dialog2').dialog()">
+    <img src="unavailable.sorry" onmouseover="show('2')">
     <div id="dialog2" title="ChiefChippy2 Site Guide">
       This will be <i>archived</i> soon as Classic Google Site gets depreciated
     </div>
     <br><h3>ChiefChippy2 Gaming</h3>
-    <img src="unavailable.sorry" onmouseover="$('#dialog3').dialog()">
+    <img src="unavailable.sorry" onmouseover="show('3')">
     <div id="dialog3" title="ChiefChippy2 Gaming">
          Yes I play video games. This is a site with info about my gaming. 
       
